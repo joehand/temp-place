@@ -15,6 +15,6 @@ http.createServer((req, res) => {
     case '/': return html(req, res).pipe(res)
     case '/bundle.js': return js(req, res).pipe(res)
     case '/bundle.css': return css(req, res).pipe(res)
-    default: return res.statusCode = 404 && res.end('404 not found')
+    default: return html(req, res).pipe(res)
   }
 }).listen(8080)
