@@ -1,0 +1,32 @@
+{
+  "name": "temp-place",
+  "version": "1.0.0",
+  "description": "temporary message place",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard",
+    "start": "bankai start -p 8080 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joehand/message-land.git"
+  },
+  "author": "Joe Hand <joe@hand.email> (https://joeahand.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joehand/message-land/issues"
+  },
+  "homepage": "https://github.com/joehand/message-land#readme",
+  "dependencies": {
+    "choo": "^3.2.2",
+    "hypercore": "^4.10.0",
+    "hyperdrive-archive-swarm": "^4.1.4",
+    "marked": "^0.3.6",
+    "memdb": "^1.3.1",
+    "sheetify": "^5.1.0",
+    "tachyons": "^4.2.0"
+  },
+  "devDependencies": {
+    "bankai": "^3.2.0"
+  }
+}
