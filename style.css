@@ -2,3 +2,24 @@ html,
 body {
     height: 100%;
 }
+
+textarea {
+  margin-top:3px;
+  box-shadow: 0 0 5px #DDD inset;
+  outline: none;
+  transition: background 0.5s;
+  transition: opacity 0.5s;
+}
+
+textarea:hover {
+  opacity:0.85;
+}
+
+textarea:focus {
+  background: white;
+  opacity:1;
+}
+
+button {
+  transition: all 0.3s;
+}

@@ -27,6 +27,8 @@
     "tachyons": "^4.2.0"
   },
   "devDependencies": {
-    "bankai": "^3.2.0"
+    "bankai": "^3.3.0",
+    "browserify": "^13.1.0",
+    "es2040": "^1.2.3"
   }
 }

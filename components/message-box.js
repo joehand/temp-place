@@ -3,35 +3,9 @@ const css = require('sheetify')
 const marked = require('marked')
 
 module.exports = (state, prev, send) => {
-  const prefix = css`
-    textarea {
-      margin-top:3px;
-      box-shadow: 0 0 5px #DDD inset;
-      outline: none;
-      transition: background 0.5s;
-      transition: opacity 0.5s;
-    }
-
-    textarea:hover {
-      opacity:0.85;
-    }
-
-    textarea:focus {
-      background: white;
-      opacity:1;
-    }
-
-    button {
-      transition: all 0.3s;
-    }
-
-    .key {
-      font-size:10px;
-    }
-  `
 
   return html`
-    <div class="${prefix} mt3">
+    <div class="mt3">
       <h3 class="f4 tc mid-gray fw5 ttu tracked">${state.feed.key ? 'Add Another Message' : 'Start a New Temp Place'}</h3>
       <form onsubmit=${(e) => {
         const input = e.target.children[0]
@@ -39,7 +13,7 @@ module.exports = (state, prev, send) => {
         input.value = ''
         e.preventDefault()
       }}>
-        <textarea class="${prefix} pa2 b--light-gray br2 w-100 o-50 h4 bg-transparent hover-bg-near-white" id="message"></textarea>
+        <textarea class="pa2 b--light-gray br2 w-100 o-50 h4 bg-transparent hover-bg-near-white" id="message"></textarea>
         <button class="w-100 mv3 pv2 fw5 small-caps
           mid-gray br2 ba b--light-gray
           hover-bg-washed-green pointer bg-transparent"
