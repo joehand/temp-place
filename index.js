@@ -1,12 +1,6 @@
 const choo = require('choo')
 const html = require('choo/html')
 const css = require('sheetify')
-const memdb = require('memdb')
-const hypercore = require('hypercore')
-const swarm = require('hyperdrive-archive-swarm')
-
-const core = hypercore(memdb())
-let feed = null
 
 const landingView = require('./views/landing')
 const feedView = require('./views/feed')
@@ -23,8 +17,6 @@ const mainView = (state, prev, send) => {
   // if (state.params.key && state.params.key.length !== 64) TODO 404
   const showMessageBox = state.params.key ? state.feed.owner : true
   if (!state.params.key && state.feed.key) send('feed:destroyFeed')
-
-  console.log('here', state.params.key, state)
 
   const feedSidebar = () => {
     return html`

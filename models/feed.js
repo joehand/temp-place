@@ -17,7 +17,6 @@ module.exports = () => {
     },
     effects: {
       appendMessage: (data, state, send, done) => {
-        console.log('appendMessage', data)
         if (state.key) {
           return _feed.append(data, () => {
             send('feed:receiveMessage', data, done)
